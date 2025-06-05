@@ -1,4 +1,4 @@
-package fr.mdbs.esportsclash.player;
+package fr.mdbs.esportsclash.player.domain.model;
 
 public class Player {
     private String id;
