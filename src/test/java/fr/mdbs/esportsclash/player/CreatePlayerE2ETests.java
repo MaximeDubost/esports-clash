@@ -1,8 +1,8 @@
 package fr.mdbs.esportsclash.player;
 
 import fr.mdbs.esportsclash.PostgreSQLTestConfiguration;
+import fr.mdbs.esportsclash.player.application.ports.PlayerRepository;
 import fr.mdbs.esportsclash.player.domain.viewmodel.IdResponse;
-import fr.mdbs.esportsclash.player.infrastructure.persistence.ram.InMemoryPlayerRepository;
 import fr.mdbs.esportsclash.player.infrastructure.spring.CreatePlayerDTO;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -27,7 +27,7 @@ public class CreatePlayerE2ETests {
     private ObjectMapper objectMapper;
 
     @Autowired
-    private InMemoryPlayerRepository playerRepository;
+    private PlayerRepository playerRepository;
 
     @Test
     public void shouldCreatePlayer() throws Exception {
